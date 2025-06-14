@@ -1,0 +1,190 @@
+[INFO] 2020-04-13 19:31:08,612 : 
+
+   __  ___     __________    __  _____
+  /  |/  /__ _/ __/_  __/___/  |/  / /
+ / /|_/ / _ `/\ \  / / /___/ /|_/ / /__
+/_/  /_/\_,_/___/ /_/     /_/  /_/____/
+
+
+MAST-ML run on 2020-04-13 23:31:08 using 
+conf file: generate_features_0413.conf
+csv file:  bandgap_data_v3.csv
+saving to: generated_features_0413
+
+
+[INFO] 2020-04-13 19:31:08,613 : Copying input files to output directory...
+[INFO] 2020-04-13 19:31:08,714 : blacklisted features, either from "input_other" or a "input_grouping":['index', 'chemicalFormula Clean', 'Band gap units', 'Band gap method', 'Reliability']
+[WARNING] 2020-04-13 19:31:08,728 : You have chosen not to specify a method of data_cleaning in the input file. By default, any feature entries containing NaN will result in removal of the feature and any target data entries containing NaN will result in removal of that target data point.
+[DEBUG] 2020-04-13 19:31:10,502 : splitter_to_group_names:
+{}
+[DEBUG] 2020-04-13 19:31:10,503 : models, pre-snatching: 
+OrderedDict()
+[DEBUG] 2020-04-13 19:31:10,504 : models, post-snatching: 
+OrderedDict()
+[DEBUG] 2020-04-13 19:31:10,505 : instantiation: Magpie, Magpie({'composition_feature': 'chemicalFormula Clean', 'feature_types': 'composition_avg'})
+[DEBUG] 2020-04-13 19:31:10,506 : instantiation: DoNothing, DoNothing({})
+[DEBUG] 2020-04-13 19:31:10,506 : instantiation: MinMaxScaler, MinMaxScaler({'feature_range': [0, 1]})
+[DEBUG] 2020-04-13 19:31:10,507 : instantiation: NoSplit, NoSplit({})
+[DEBUG] 2020-04-13 19:31:10,508 : cv, pre-snatching: 
+OrderedDict([('NoSplit', NoSplit())])
+[DEBUG] 2020-04-13 19:31:10,509 : cv, post-snatching: 
+OrderedDict([('NoSplit', NoSplit())])
+[DEBUG] 2020-04-13 19:31:10,510 : instantiation: DoNothing, DoNothing({})
+[DEBUG] 2020-04-13 19:31:10,511 : generators: 
+[['Magpie', Magpie(composition_feature='chemicalFormula Clean',
+    feature_types='composition_avg')]]
+[DEBUG] 2020-04-13 19:31:10,512 : clusterers: 
+[]
+[DEBUG] 2020-04-13 19:31:10,513 : normalizers: 
+[['DoNothing', DoNothing()], ['MinMaxScaler', MinMaxScaler(copy=True, feature_range=[0, 1])]]
+[DEBUG] 2020-04-13 19:31:10,513 : hyperopts: 
+[]
+[DEBUG] 2020-04-13 19:31:10,514 : selectors: 
+[['DoNothing', DoNothing()]]
+[DEBUG] 2020-04-13 19:31:10,515 : splitters: 
+[('NoSplit', NoSplit())]
+[INFO] 2020-04-13 19:31:10,516 : There are 2 feature normalizers, 0 hyperparameter optimizers, 1 feature selectors, 0 models, and 1 splitters.
+[INFO] 2020-04-13 19:31:10,516 : Doing feature generation...
+[INFO] 2020-04-13 19:32:15,254 : Saving generated data to csv...
+[DEBUG] 2020-04-13 19:32:15,259 : generated cols: Index(['AtomicNumber_composition_average', 'AtomicRadii_composition_average',
+       'AtomicVolume_composition_average', 'AtomicWeight_composition_average',
+       'BCCefflatcnt_composition_average', 'BCCenergy_pa_composition_average',
+       'BCCfermi_composition_average', 'BCCmagmom_composition_average',
+       'BCCvolume_pa_composition_average',
+       'BCCvolume_padiff_composition_average', 'BoilingT_composition_average',
+       'BulkModulus_composition_average', 'Column_composition_average',
+       'CovalentRadii_composition_average',
+       'CovalentRadius_composition_average', 'Density_composition_average',
+       'ElasticModulus_composition_average',
+       'ElectricalConductivity_composition_average',
+       'ElectronAffinity_composition_average',
+       'Electronegativity_composition_average',
+       'FirstIonizationEnergy_composition_average',
+       'GSbandgap_composition_average', 'GSenergy_pa_composition_average',
+       'GSestBCClatcnt_composition_average',
+       'GSestFCClatcnt_composition_average', 'GSmagmom_composition_average',
+       'GSvolume_pa_composition_average', 'Group_composition_average',
+       'HHIp_composition_average', 'HHIr_composition_average',
+       'HeatCapacityMass_composition_average',
+       'HeatCapacityMolar_composition_average',
+       'HeatFusion_composition_average',
+       'HeatVaporization_composition_average',
+       'ICSDVolume_composition_average', 'IonicRadii_composition_average',
+       'IonizationEnergy_composition_average', 'IsAlkali_composition_average',
+       'IsAlkalineEarth_composition_average', 'IsBCC_composition_average',
+       'IsBoron_composition_average', 'IsCarbon_composition_average',
+       'IsChalcogen_composition_average', 'IsDBlock_composition_average',
+       'IsFBlock_composition_average', 'IsFCC_composition_average',
+       'IsHalogen_composition_average', 'IsHexagonal_composition_average',
+       'IsMetal_composition_average', 'IsMetalloid_composition_average',
+       'IsMonoclinic_composition_average', 'IsNobleGas_composition_average',
+       'IsNonmetal_composition_average', 'IsOrthorhombic_composition_average',
+       'IsPnictide_composition_average', 'IsRareEarth_composition_average',
+       'IsRhombohedral_composition_average',
+       'IsSimpleCubic_composition_average', 'IsTetragonal_composition_average',
+       'IsTransitionMetal_composition_average', 'MeltingT_composition_average',
+       'MendeleevNumber_composition_average',
+       'MiracleRadius_composition_average', 'NUnfilled_composition_average',
+       'NValance_composition_average', 'NdUnfilled_composition_average',
+       'NdValence_composition_average', 'NfUnfilled_composition_average',
+       'NfValence_composition_average', 'NpUnfilled_composition_average',
+       'NpValence_composition_average', 'NsUnfilled_composition_average',
+       'NsValence_composition_average', 'Number_composition_average',
+       'Period_composition_average', 'Polarizability_composition_average',
+       'Row_composition_average', 'SecondIonizationEnergy_composition_average',
+       'ShearModulus_composition_average',
+       'SpaceGroupNumber_composition_average',
+       'SpecificHeatCapacity_composition_average',
+       'ThermalConductivity_composition_average',
+       'ThermalExpansionCoefficient_composition_average',
+       'ThirdIonizationEnergy_composition_average',
+       'n_ws^third_composition_average', 'phi_composition_average',
+       'valence_composition_average'],
+      dtype='object')
+[INFO] 2020-04-13 19:32:15,394 : Removing constant features, regardless of feature selectors.
+[WARNING] 2020-04-13 19:32:15,469 : Removed 1/87 constant columns.
+[DEBUG] 2020-04-13 19:32:15,470 : Removed the following constant columns: ['IsNobleGas_composition_average']
+[INFO] 2020-04-13 19:32:15,472 : Saving generated data without constant columns to csv...
+[INFO] 2020-04-13 19:32:15,603 : Doing clustering...
+[INFO] 2020-04-13 19:32:15,605 : Saving clustered data to csv...
+[INFO] 2020-04-13 19:32:15,725 : Running normalizer DoNothing ...
+[INFO] 2020-04-13 19:32:15,727 : Saving normalized data to csv...
+[INFO] 2020-04-13 19:32:15,857 : Running selectors...
+[INFO] 2020-04-13 19:32:15,859 :     Running selector DoNothing ...
+[INFO] 2020-04-13 19:32:15,863 :     Saving selected features to csv...
+[INFO] 2020-04-13 19:32:16,007 : Running normalizer MinMaxScaler ...
+[INFO] 2020-04-13 19:32:16,017 : Saving normalized data to csv...
+[INFO] 2020-04-13 19:32:16,169 : Running selectors...
+[INFO] 2020-04-13 19:32:16,170 :     Running selector DoNothing ...
+[INFO] 2020-04-13 19:32:16,174 :     Saving selected features to csv...
+[DEBUG] 2020-04-13 19:32:16,365 : Finding splitter-required columns in data...
+[INFO] 2020-04-13 19:32:16,366 : Fitting models to splits...
+[INFO] 2020-04-13 19:32:16,367 : Making image html file...
+[INFO] 2020-04-13 19:32:16,413 : wrote /home/nanohub/rjiang/intromllab/bin/./generated_features_0413/index.html
+[INFO] 2020-04-13 19:32:16,414 : Making html file of all runs stats...
+[WARNING] 2020-04-13 19:34:09,860 : /home/nanohub/rjiang/intromllab/bin/./generated_features_0413 not empty. Renaming...
+[INFO] 2020-04-13 19:34:09,865 : Saving to directory '/home/nanohub/rjiang/intromllab/bin/./generated_features_0413_04_13_19_34_09'
+[INFO] 2020-04-13 19:34:09,874 : 
+
+   __  ___     __________    __  _____
+  /  |/  /__ _/ __/_  __/___/  |/  / /
+ / /|_/ / _ `/\ \  / / /___/ /|_/ / /__
+/_/  /_/\_,_/___/ /_/     /_/  /_/____/
+
+
+MAST-ML run on 2020-04-13 23:34:09 using 
+conf file: generate_features_0413.conf
+csv file:  bandgap_data_v3.csv
+saving to: generated_features_0413_04_13_19_34_09
+
+
+[INFO] 2020-04-13 19:34:09,876 : Copying input files to output directory...
+[INFO] 2020-04-13 19:34:09,928 : blacklisted features, either from "input_other" or a "input_grouping":[]
+[WARNING] 2020-04-13 19:34:09,933 : You have chosen not to specify a method of data_cleaning in the input file. By default, any feature entries containing NaN will result in removal of the feature and any target data entries containing NaN will result in removal of that target data point.
+[ERROR] 2020-04-13 19:34:10,038 : A runtime exception has occured, please go to https://github.com/uw-cmg/MAST-ML/issues and post your issue.
+[ERROR] 2020-04-13 19:34:10,040 : unsupported operand type(s) for /: 'str' and 'int'
+Traceback (most recent call last):
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/mastml/mastml_driver.py", line 62, in main
+    mastml_run(conf_path, data_path, outdir)
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/mastml/mastml_driver.py", line 130, in mastml_run
+    n_stdevs=3)
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/mastml/data_cleaner.py", line 34, in flag_outliers
+    avg = np.average(df[col])
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/numpy/lib/function_base.py", line 392, in average
+    avg = a.mean(axis)
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/numpy/core/_methods.py", line 87, in _mean
+    ret = ret / rcount
+TypeError: unsupported operand type(s) for /: 'str' and 'int'
+[WARNING] 2020-04-13 19:35:17,025 : /home/nanohub/rjiang/intromllab/bin/./generated_features_0413 not empty. Renaming...
+[INFO] 2020-04-13 19:35:17,031 : Saving to directory '/home/nanohub/rjiang/intromllab/bin/./generated_features_0413_04_13_19_35_17'
+[INFO] 2020-04-13 19:35:17,042 : 
+
+   __  ___     __________    __  _____
+  /  |/  /__ _/ __/_  __/___/  |/  / /
+ / /|_/ / _ `/\ \  / / /___/ /|_/ / /__
+/_/  /_/\_,_/___/ /_/     /_/  /_/____/
+
+
+MAST-ML run on 2020-04-13 23:35:17 using 
+conf file: generate_features_0413.conf
+csv file:  bandgap_data_v3.csv
+saving to: generated_features_0413_04_13_19_35_17
+
+
+[INFO] 2020-04-13 19:35:17,046 : Copying input files to output directory...
+[INFO] 2020-04-13 19:35:17,105 : blacklisted features, either from "input_other" or a "input_grouping":[]
+[WARNING] 2020-04-13 19:35:17,112 : You have chosen not to specify a method of data_cleaning in the input file. By default, any feature entries containing NaN will result in removal of the feature and any target data entries containing NaN will result in removal of that target data point.
+[ERROR] 2020-04-13 19:35:17,220 : A runtime exception has occured, please go to https://github.com/uw-cmg/MAST-ML/issues and post your issue.
+[ERROR] 2020-04-13 19:35:17,224 : unsupported operand type(s) for /: 'str' and 'int'
+Traceback (most recent call last):
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/mastml/mastml_driver.py", line 62, in main
+    mastml_run(conf_path, data_path, outdir)
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/mastml/mastml_driver.py", line 130, in mastml_run
+    n_stdevs=3)
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/mastml/data_cleaner.py", line 34, in flag_outliers
+    avg = np.average(df[col])
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/numpy/lib/function_base.py", line 392, in average
+    avg = a.mean(axis)
+  File "/apps/share64/debian7/anaconda/anaconda-6/lib/python3.7/site-packages/numpy/core/_methods.py", line 87, in _mean
+    ret = ret / rcount
+TypeError: unsupported operand type(s) for /: 'str' and 'int'

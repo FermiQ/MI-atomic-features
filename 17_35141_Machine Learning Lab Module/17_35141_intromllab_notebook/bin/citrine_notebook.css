@@ -1,0 +1,180 @@
+.html-hide {
+	display: none;
+}
+
+.text_cell_render {
+    font-family: 'Lusitana', serif;
+    font-size: 1.2em;
+}  
+
+blockquote{
+    border-left: 5px solid #FFB25B;
+}
+
+
+a {
+	color: rgba(140, 134, 189, 1);
+}
+
+a.no-style {
+
+}
+
+a:visited {
+    color: rgba(140, 134, 189, .7);
+}
+
+.rendered_html :link,
+.rendered_html :visited {
+	text-decoration: none;
+}
+
+h1, h2, h3, h4, .button, .toggleInner {
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    text-transform: uppercase;
+}
+
+.intro h2:first-of-type {
+    margin-top: 10px;
+    font-style: italic;
+    color: #f3822f
+}
+
+hr{
+    border-top: 2px solid #A9A9A9;
+    background-color: transparent;
+}
+
+.lesson h3 {
+	color: #f3822f;
+}
+
+.exercise {
+    border:3px solid rgba(255,130,0,0.5);
+    padding:3px 15px 15px;
+}
+
+.protip {
+    border:3px solid rgba(249,56,34,0.6);
+    background-color:rgba(249,56,34,0.1);
+    padding:3px 15px 15px;
+	border: 3px solid rgba(119,188,74, .6);
+	background-color: rgba(119,188,74, .1);
+}
+
+.info {
+    border:3px solid rgba(249,56,34,0.6);
+    background-color:rgba(249,56,34,0.1);
+    padding:3px 15px 15px;
+	border: 3px solid rgba(137,134,202, .6);
+	background-color: rgba(137,134,202, .1);
+}
+
+.answers {
+    border:3px solid rgba(255,130,0,0.7);
+    background-color:rgba(255,130,0,0.15);
+    padding:3px 15px 15px;
+}
+
+.rendered_html hr {
+    color: transparent;
+    background-color: transparent;
+}
+
+.rendered_html pre{
+    padding:10px
+}
+
+.toc {
+    margin-top: 25px;
+}
+
+.toc a {
+	color: #000;
+}
+
+
+.toc blockquote {
+    margin: 10px 25px;
+    padding: 5px 15px;
+}
+
+.toc h2 {
+    margin-bottom: 25px;
+}
+
+.toc h3 {
+	margin-top: 15px !important;
+	margin-bottom: 15px;
+}
+
+.toc h4 {
+	margin-top: 0 !important;
+    font-family: 'Lusitana', serif;
+    text-transform: none;
+}
+
+.toc li {
+	margin-bottom: 10px;
+	padding-left: 25px;
+}
+
+.button {
+	width: 50%;
+	margin: 0 auto;
+	padding: 10px 15px;
+	box-sizing: border-box;
+	background-color: #f3822f;
+	color: white;
+	margin-top: 25px;
+	text-align: center;
+	font-size: 1.25em;
+	cursor: pointer;
+}
+
+.button p {
+	text-align: center;
+}
+.button a {
+	text-decoration: none !important;
+	color: white;
+	text-align: center;
+}
+
+.cell.selected, 
+.cell.selected.jupyter-soft-selected {
+    border-color: rgba(0,0,0,0) !important;
+}
+
+.cell.selected:before, 
+.cell.selected.jupyter-soft-selected:before {
+	background-color: #f3822f !important;
+}
+
+.code_cell .inner_cell {
+	padding: 0.5em 0.5em 0.5em 0.4em;
+}
+
+.inner_cell {
+    position: relative;
+}
+
+.toggleCell {
+    cursor: pointer;
+    padding: 0.5em 0.5em 0.5em 0.4em;
+    position: absolute;
+    right: 25px;
+    top: 15px;
+}
+
+.toggleInner {
+    background-color: #f3822f;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    color: white;
+}
+
+.cellContent {
+    margin-top: 15px;
+}

@@ -1,0 +1,82 @@
+[INFO] 2020-03-10 10:38:12,643 : 
+
+   __  ___     __________    __  _____
+  /  |/  /__ _/ __/_  __/___/  |/  / /
+ / /|_/ / _ `/\ \  / / /___/ /|_/ / /__
+/_/  /_/\_,_/___/ /_/     /_/  /_/____/
+
+
+MAST-ML run on 2020-03-10 14:38:12 using 
+conf file: generate_features.conf
+csv file:  bandgap_data_v3.csv
+saving to: generated_features_v3
+
+
+[INFO] 2020-03-10 10:38:12,645 : Copying input files to output directory...
+[INFO] 2020-03-10 10:38:12,720 : blacklisted features, either from "input_other" or a "input_grouping":['index', 'chemicalFormula Clean', 'Band gap units', 'Band gap method', 'Reliability']
+[WARNING] 2020-03-10 10:38:12,730 : You have chosen not to specify a method of data_cleaning in the input file. By default, any feature entries containing NaN will result in removal of the feature and any target data entries containing NaN will result in removal of that target data point.
+[DEBUG] 2020-03-10 10:38:14,110 : splitter_to_group_names:
+{}
+[DEBUG] 2020-03-10 10:38:14,113 : models, pre-snatching: 
+OrderedDict()
+[DEBUG] 2020-03-10 10:38:14,114 : models, post-snatching: 
+OrderedDict()
+[DEBUG] 2020-03-10 10:38:14,116 : instantiation: Magpie, Magpie({'composition_feature': 'chemicalFormula Clean'})
+[DEBUG] 2020-03-10 10:38:14,118 : instantiation: DoNothing, DoNothing({})
+[DEBUG] 2020-03-10 10:38:14,121 : instantiation: MinMaxScaler, MinMaxScaler({'feature_range': [0, 1]})
+[DEBUG] 2020-03-10 10:38:14,123 : instantiation: NoSplit, NoSplit({})
+[DEBUG] 2020-03-10 10:38:14,125 : cv, pre-snatching: 
+OrderedDict([('NoSplit', NoSplit())])
+[DEBUG] 2020-03-10 10:38:14,128 : cv, post-snatching: 
+OrderedDict([('NoSplit', NoSplit())])
+[DEBUG] 2020-03-10 10:38:14,132 : instantiation: DoNothing, DoNothing({})
+[DEBUG] 2020-03-10 10:38:14,135 : generators: 
+[['Magpie', Magpie(composition_feature='chemicalFormula Clean',
+    feature_types=['composition_avg', 'arithmetic_avg', 'max', 'min', 'difference', 'elements'])]]
+[DEBUG] 2020-03-10 10:38:14,138 : clusterers: 
+[]
+[DEBUG] 2020-03-10 10:38:14,141 : normalizers: 
+[['DoNothing', DoNothing()], ['MinMaxScaler', MinMaxScaler(copy=True, feature_range=[0, 1])]]
+[DEBUG] 2020-03-10 10:38:14,144 : hyperopts: 
+[]
+[DEBUG] 2020-03-10 10:38:14,146 : selectors: 
+[['DoNothing', DoNothing()]]
+[DEBUG] 2020-03-10 10:38:14,149 : splitters: 
+[('NoSplit', NoSplit())]
+[INFO] 2020-03-10 10:38:14,152 : There are 2 feature normalizers, 0 hyperparameter optimizers, 1 feature selectors, 0 models, and 1 splitters.
+[INFO] 2020-03-10 10:38:14,154 : Doing feature generation...
+[WARNING] 2020-03-10 10:39:09,633 : Dropping 100/609 generated columns due to missing values
+[INFO] 2020-03-10 10:39:09,757 : Saving generated data to csv...
+[DEBUG] 2020-03-10 10:39:09,760 : generated cols: Index(['AtomicNumber_composition_average', 'AtomicRadii_composition_average',
+       'AtomicVolume_composition_average', 'AtomicWeight_composition_average',
+       'BCCefflatcnt_composition_average', 'BCCenergy_pa_composition_average',
+       'BCCfermi_composition_average', 'BCCmagmom_composition_average',
+       'BCCvolume_pa_composition_average',
+       'BCCvolume_padiff_composition_average',
+       ...
+       'Element1_NsUnfilled', 'Element1_NsValence', 'Element1_Number',
+       'Element1_Period', 'Element1_Polarizability', 'Element1_Row',
+       'Element1_SpaceGroupNumber', 'Element1_SpecificHeatCapacity',
+       'Element1_ThermalExpansionCoefficient', 'Element1_valence'],
+      dtype='object', length=509)
+[INFO] 2020-03-10 10:39:10,095 : Removing constant features, regardless of feature selectors.
+[WARNING] 2020-03-10 10:39:10,315 : Removed 20/509 constant columns.
+[DEBUG] 2020-03-10 10:39:10,317 : Removed the following constant columns: ['IsAlkalineEarth_min_value', 'IsNobleGas_arithmetic_average', 'Element1_IsNobleGas', 'BCCenergy_pa_difference', 'IsNobleGas_difference', 'IsNobleGas_min_value', 'IsRareEarth_min_value', 'IsSimpleCubic_difference', 'BCCmagmom_min_value', 'IsFBlock_min_value', 'IsNobleGas_composition_average', 'Element1_IsSimpleCubic', 'NfUnfilled_min_value', 'IsBCC_min_value', 'NsUnfilled_min_value', 'IsHalogen_difference', 'IsAlkali_min_value', 'IsNobleGas_max_value', 'NsValence_max_value', 'GSenergy_pa_difference']
+[INFO] 2020-03-10 10:39:10,319 : Saving generated data without constant columns to csv...
+[INFO] 2020-03-10 10:39:10,944 : Doing clustering...
+[INFO] 2020-03-10 10:39:10,947 : Saving clustered data to csv...
+[INFO] 2020-03-10 10:39:11,251 : Running normalizer DoNothing ...
+[INFO] 2020-03-10 10:39:11,253 : Saving normalized data to csv...
+[INFO] 2020-03-10 10:39:11,590 : Running selectors...
+[INFO] 2020-03-10 10:39:11,593 :     Running selector DoNothing ...
+[INFO] 2020-03-10 10:39:11,598 :     Saving selected features to csv...
+[INFO] 2020-03-10 10:39:11,914 : Running normalizer MinMaxScaler ...
+[INFO] 2020-03-10 10:39:11,927 : Saving normalized data to csv...
+[INFO] 2020-03-10 10:39:12,454 : Running selectors...
+[INFO] 2020-03-10 10:39:12,456 :     Running selector DoNothing ...
+[INFO] 2020-03-10 10:39:12,462 :     Saving selected features to csv...
+[DEBUG] 2020-03-10 10:39:13,049 : Finding splitter-required columns in data...
+[INFO] 2020-03-10 10:39:13,052 : Fitting models to splits...
+[INFO] 2020-03-10 10:39:13,053 : Making image html file...
+[INFO] 2020-03-10 10:39:13,083 : wrote /home/nanohub/bafflerbach/intromllab/bin/./generated_features_v3/index.html
+[INFO] 2020-03-10 10:39:13,085 : Making html file of all runs stats...

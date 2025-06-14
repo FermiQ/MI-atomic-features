@@ -1,0 +1,4 @@
+[WARNING] 2020-03-06 14:39:42,130 : You have chosen not to specify a method of data_cleaning in the input file. By default, any feature entries containing NaN will result in removal of the feature and any target data entries containing NaN will result in removal of that target data point.
+[WARNING] 2020-03-06 14:39:42,133 : There are no X feature vectors imported from the data file. Therefore, data cleaning cannot be performed.
+[WARNING] 2020-03-06 14:42:31,398 : Dropping 187/696 generated columns due to missing values
+[WARNING] 2020-03-06 14:42:32,932 : Removed 20/509 constant columns.
